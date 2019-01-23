@@ -1,4 +1,4 @@
-# Palindrome assignment
+# Basic JavaScript Algorithms
 
 Hi there this is the assignment for the iron hackers hope you like it!
 
@@ -18,9 +18,23 @@ I run the code
 
 I want as out put all the palindromes and the first letter in Capital
 
-**Goodluck and have fun !**
 
 
+########  Speed Limit Catcher
 
+Check speed Limit of a Driver,
+If the minimum speed limit of a Driver is 70km/hr write a function that takes in 2 arguments, 
+
+# When 
+
+I run the code
+
+If the Driver drives between 70 and 74km he should get the OK message
+
+For every 5km above 70km/hr the driver should get 1 point and 
+
+If he gets 12 points his licece should be suspended. 
+
+### write a function with one arg takes a number and write even of odd numbers
 
 
