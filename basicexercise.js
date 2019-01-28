@@ -154,3 +154,111 @@ function primeNum (numLimit){
   }
 
 }
+
+// Factory Function
+
+let address = createAddress('a','b','c')
+
+console.log(address)
+
+function createAddress (street,city,state) {
+return {
+  street,
+  city,
+  state
+ }
+}
+
+// Constructor Function
+
+let add = new Address('a','b','c')
+
+console.log(add)
+
+function Address (street, city, state){
+  this.street = street,
+  this.city = city,
+  this.state = state
+}
+
+
+
+// FILTERING AN ARRAY OF OBJECTS
+
+const arr = [
+  { id: 15 },
+  { id: -1 },
+  { id: 0 },
+  { id: 3 },
+  { id: 12.2 },
+  { },
+  { id: null },
+  { id: NaN },
+  { id: 'undefined' }
+];
+
+let invalidEntries = 0;
+
+function filterByID(obj) {
+  if ('id' in obj && typeof(obj.id) === 'number' && !isNaN(obj.id)) {
+    return true;
+  } else {
+    invalidEntries++;
+    return false;
+  }
+}
+
+const arrByID = arr.filter(filterByID);
+console.log(arrByID)  
+
+ // SUM OF ELEMENTS REDUCE METHOD
+const numbers = [1,3,4,2,4,3]
+
+const sum = numbers.reduce((a,b) => a+b)
+console.log(sum)
+
+// CHECK IF ELEMENT IS INCLUDED
+
+const allEggs = [1,2,3,4,5,6,7,3]
+
+const goodEggs = except(allEggs,[1,2,3,4])
+console.log(goodEggs)
+
+function except(allEggs, badEggs) {
+    let goodEggs = []
+    for(let egg of allEggs)
+    if (!badEggs.includes(egg))
+    goodEggs.push(egg)
+    return  goodEggs
+}
+
+// GET THE MAX OF AN ARRAY
+
+const num = [1,2,4,2,5,6,3,5,2,10]
+
+let max = findMax ([1,2,3,4,9,8,100])
+
+let max = num[0]
+ console.log(max)
+
+function findMax(num){
+   for(let i = 1; i < num.length; num++)
+   if (max < num[i])
+   max = num[i]
+   return max
+
+}
+
+// COUNT OCCURANCE 
+
+const numbers = [ 3,2,4,4,5,1,2,2,2,2]
+count = countOccurance(numbers,4)
+console.log(count)
+function countOccurance(numbers,searchNum){
+    let count = 0
+    for(let el of numbers)
+    if (el === searchNum )
+    count++
+    return count
+}
+
