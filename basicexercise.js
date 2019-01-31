@@ -262,3 +262,56 @@ function countOccurance(numbers,searchNum){
     return count
 }
 
+
+//  ARRAY IN ARRAY SUM
+
+function sum(...nums){
+  if (nums.length === 1 && Array.isArray(nums[0]))
+    nums = [...nums[0]]
+  return nums.reduce((a,b) => a+b)
+}
+console.log(sum([2,3,1]))
+
+// GETTERS AND SETTERS
+
+const person = {
+    firstName : 'Jude',
+    lastName : 'Okagu',
+    get fullName(){
+        return `${person.firstName} ${person.lastName}` 
+    },
+     set fullName(value) {
+        const parts = value.split(' ');
+        this.firstName = parts[0];
+        this.lastName = parts[1];
+    }
+};
+
+person.fullName = 'Emmy Cole'
+console.log(person)
+
+
+// this key word
+// A method is a function that is called on an object. 
+// in an object this refers to the object while in a function this refers to the window function
+
+// HOUSTING WE CALL A FUNCTION ONLY AFRER THE EXPRESSION DECLARATION CAN BE CALLED ANYTIME
+
+// FUNTION DECLATION
+
+// REST OPERATOR
+
+function sum (...juud){
+   return juud.reduce((a,b) => a+b);
+}
+sum(2,3,1,1,3,4);
+
+// WE CANT PASS AN ARGUMENT AFTER THE ...REST OPERATOR
+
+// DEDUCTING DISCOUNT SHOPPING CART REST OPERATPR
+
+function sum (disc,...lolo){
+ let total = lolo.reduce((a,b) => a+b);
+ return total * (1 - disc); 
+}
+console.log(sum(0.2,3,2,4,5,6));
